@@ -85,7 +85,8 @@ def main():
 
     # Which networks to evaluate them on?
     tasks = []
-    tasks += [EasyDict(run_func_name='run_metrics.run_pickle', network_pkl='https://drive.google.com/uc?id=1opTWG1jYlyS9TXAuqVyVR68kQWhOhA99', dataset_args=EasyDict(tfrecord_dir='ffhq', shuffle_mb=0), mirror_augment=True)] # karras2019stylegan-ffhq-1024x1024.pkl
+#     tasks += [EasyDict(run_func_name='run_metrics.run_pickle', network_pkl='https://drive.google.com/uc?id=1opTWG1jYlyS9TXAuqVyVR68kQWhOhA99', dataset_args=EasyDict(tfrecord_dir='ffhq', shuffle_mb=0), mirror_augment=True)] # karras2019stylegan-ffhq-1024x1024.pkl
+    tasks += [EasyDict(run_func_name='run_metrics.run_pickle', network_pkl='https://share.weiyun.com/U4aYSWc8', dataset_args=EasyDict(tfrecord_dir='ffhq', shuffle_mb=0), mirror_augment=True)] 
     #tasks += [EasyDict(run_func_name='run_metrics.run_snapshot', run_id=100, snapshot=25000)]
     #tasks += [EasyDict(run_func_name='run_metrics.run_all_snapshots', run_id=100)]
 
