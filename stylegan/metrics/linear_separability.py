@@ -148,8 +148,8 @@ class LS(metric_base.MetricBase):
 
         np.save('results/stylegan-dlatents.npy', results['dlatents'])
 #         np.save('results/34_score.npy', results[34][:, 0].reshape((-1,1)))
-#         np.save('results/3_score.npy', results[3][:, 0].reshape((-1,1)))
-        np.save('results/8_score.npy', results[8][:, 0].reshape((-1,1)))
+        np.save('results/3_score.npy', results[3][:, 0].reshape((-1,1)))
+#         np.save('results/8_score.npy', results[8][:, 0].reshape((-1,1)))
 #         np.save('results/9_score.npy', results[9][:, 0].reshape((-1,1)))
 
 #       # Calculate conditional entropy for each attribute.
