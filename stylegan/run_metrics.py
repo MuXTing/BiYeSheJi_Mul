@@ -99,15 +99,15 @@ def main():
     # Execute.
     submit_config.run_dir_root = dnnlib.submission.submit.get_template_from_path(config.result_dir)
     submit_config.run_dir_ignore += config.run_dir_ignore
-#     for task in tasks:
-#         for metric in metrics_34:
-#             submit_config.run_desc = '%s-%s' % (task.run_func_name, metric.name)
-#             if task.run_func_name.endswith('run_snapshot'):
-#                 submit_config.run_desc += '-%s-%s' % (task.run_id, task.snapshot)
-#             if task.run_func_name.endswith('run_all_snapshots'):
-#                 submit_config.run_desc += '-%s' % task.run_id
-#             submit_config.run_desc += '-%dgpu' % submit_config.num_gpus
-#             dnnlib.submit_run(submit_config, metric_args=metric, **task)
+    for task in tasks:
+        for metric in metrics_34:
+            submit_config.run_desc = '%s-%s' % (task.run_func_name, metric.name)
+            if task.run_func_name.endswith('run_snapshot'):
+                submit_config.run_desc += '-%s-%s' % (task.run_id, task.snapshot)
+            if task.run_func_name.endswith('run_all_snapshots'):
+                submit_config.run_desc += '-%s' % task.run_id
+            submit_config.run_desc += '-%dgpu' % submit_config.num_gpus
+            dnnlib.submit_run(submit_config, metric_args=metric, **task)
     
 #     for task in tasks:
 #         for metric in metrics_8:
@@ -131,15 +131,15 @@ def main():
             
             
             
-    for task in tasks:
-        for metric in metrics_3:
-            submit_config.run_desc = '%s-%s' % (task.run_func_name, metric.name)
-            if task.run_func_name.endswith('run_snapshot'):
-                submit_config.run_desc += '-%s-%s' % (task.run_id, task.snapshot)
-            if task.run_func_name.endswith('run_all_snapshots'):
-                submit_config.run_desc += '-%s' % task.run_id
-            submit_config.run_desc += '-%dgpu' % submit_config.num_gpus
-            dnnlib.submit_run(submit_config, metric_args=metric, **task)
+#     for task in tasks:
+#         for metric in metrics_3:
+#             submit_config.run_desc = '%s-%s' % (task.run_func_name, metric.name)
+#             if task.run_func_name.endswith('run_snapshot'):
+#                 submit_config.run_desc += '-%s-%s' % (task.run_id, task.snapshot)
+#             if task.run_func_name.endswith('run_all_snapshots'):
+#                 submit_config.run_desc += '-%s' % task.run_id
+#             submit_config.run_desc += '-%dgpu' % submit_config.num_gpus
+#             dnnlib.submit_run(submit_config, metric_args=metric, **task)
 
 #----------------------------------------------------------------------------
 
